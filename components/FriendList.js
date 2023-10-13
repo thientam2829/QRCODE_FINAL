@@ -33,9 +33,9 @@ const FriendListScreen = () => {
                 keyExtractor={(item) => item.email}
                 renderItem={({item}) => (
                     <View style={styles.friendItem}>
-                        <Text style={styles.friendName}>Name: {item.name}</Text>
+                        <Text style={styles.friendName}>Họ tên: {item.name}</Text>
                         <Text>Email: {item.email}</Text>
-                        <Text>Phone: {item.phone}</Text>
+                        <Text>Số điện thoại: {item.phone}</Text>
                         <TouchableOpacity onPress={() => handleDeleteFriend(item.email)}>
                             <Text style={{color: "red"}}>Xoá</Text>
                         </TouchableOpacity>

@@ -41,10 +41,10 @@ class HomeScreen extends Component {
                 {/* <Text style={styles.title}>Trang chủ</Text> */}
                 <View style={styles.header}>
                     <Image source={require("../images/logo.png")} style={styles.image} />
-                    <Text style={styles.hello}>Xin chào : {name}</Text>
+                    <Text>Xin chào {name}</Text>
                 </View>
-                <ClockComponent/>
-                <RandomQuoteComponent />
+                    <ClockComponent/>
+                    <RandomQuoteComponent/>
                 <View style={styles.bottomButtons}>
                     <TouchableOpacity style={styles.bottomButton} onPress={this.handleHomeButton}>
                         <FontAwesome name="home" size={24} color="black" />
@@ -69,6 +69,7 @@ class HomeScreen extends Component {
     }
 }
 
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -80,8 +81,6 @@ const styles = StyleSheet.create({
         fontSize: 24,
         marginBottom: 20,
     },
-    hello:{fontWeight:"bold",fontSize:20},
-    
     bottomButtons: {
         flexDirection: "row",
         justifyContent: "space-between",
@@ -115,7 +114,7 @@ const styles = StyleSheet.create({
     image: {
         width: 90,
         height: 90,
-        marginRight:25
+        marginRight: 25,
     },
 });
 

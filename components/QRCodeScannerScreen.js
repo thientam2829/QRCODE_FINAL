@@ -14,13 +14,14 @@ const QRCodeScannerScreen = ({ navigation }) => {
   }, []);
   const handleBarCodeScanned = ({ data }) => {
     setScanned(true);
-   
+    // Xử lý dữ liệu mã QR ở đây (data chứa nội dung mã QR)
     console.log(`Bar code scanned: ${data}`);
     const [name, email, phone] = data.split(", ");
 
-  
+    // Điều hướng đến màn hình hiển thị thông tin và nút kết bạn
     navigation.navigate("UserInfo", { name, email, phone });
-   
+    // Điều hướng đến màn hình hiển thị thông tin và nút kết bạn
+    //navigation.navigate("UserInfo", { data });
   };
 
   if (hasPermission === null) {

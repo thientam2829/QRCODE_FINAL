@@ -1,6 +1,6 @@
 import React from "react";
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
-import { Ionicons } from "@expo/vector-icons"; // Import icons từ Expo
+import { Ionicons } from "@expo/vector-icons";
 
 import HomeScreen from "./HomeScreen";
 import ProfileScreen from "./ProfileScreen";

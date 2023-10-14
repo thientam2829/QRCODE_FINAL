@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {View, Text, StyleSheet, TouchableOpacity} from "react-native";
 import QRCode from "react-native-qrcode-svg";
-import {getNameFromFirestore} from "../firebaseConfig"; // Import the function
-import {auth} from "../firebaseConfig"; // Import Firebase authentication
+import {getNameFromFirestore} from "../firebaseConfig"; 
+import {auth} from "../firebaseConfig";
 import {getPhoneFromFirestore} from "../firebaseConfig";
 
 class ProfileScreen extends Component {

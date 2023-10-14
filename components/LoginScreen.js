@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         width: "80%",
         padding: 10,
         marginBottom: 10,
-        borderWidth: "none",
+       // borderWidth: 0,
         outline: "none",
         backgroundColor: "white",
     },

@@ -11,7 +11,7 @@ const RandomQuoteComponent = () => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.json();
+        return response.json();a
       })
       .then(data => setRandomQuote(data.content))
       .catch(error => setError(error.message));

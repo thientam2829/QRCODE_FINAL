@@ -20,12 +20,12 @@ const auth = getAuth(app);
 const database = getFirestore(app);
 const getNameFromFirestore = async (email) => {
   const db = getFirestore();
-  const usersCollection = collection(db, "USER"); // Replace "USER" with the correct collection name
+  const usersCollection = collection(db, "USER"); 
   const q = query(usersCollection, where("email", "==", email));
   const querySnapshot = await getDocs(q);
 
   if (querySnapshot.size > 0) {
-    // Assuming email is unique, so we expect only one document
+    
     const user = querySnapshot.docs[0].data();
     return user.name;
   } else {
@@ -35,7 +35,7 @@ const getNameFromFirestore = async (email) => {
 };
 const getPhoneFromFirestore = async (email) => {
   const db = getFirestore();
-  const usersRef = collection(db, 'USER'); // Thay 'users' bằng tên collection của bạn
+  const usersRef = collection(db, 'USER'); 
 
   const q = query(usersRef, where('email', '==', email));
 
@@ -43,7 +43,7 @@ const getPhoneFromFirestore = async (email) => {
     const querySnapshot = await getDocs(q);
     if (!querySnapshot.empty) {
       const userData = querySnapshot.docs[0].data();
-      return userData.phone; // Giả sử phone được lưu trong field 'phone'
+      return userData.phone; 
     } else {
       console.error('User not found in Firestore.');
       return null;
